@@ -11,7 +11,7 @@ import (
 func Engine() *gin.Engine {
 	e := &gin.Engine{}
 
-	if !config.Conf.Debug {
+	if !config.Conf.App.Debug {
 		gin.SetMode(gin.DebugMode)
 		e = gin.Default()
 	} else {
